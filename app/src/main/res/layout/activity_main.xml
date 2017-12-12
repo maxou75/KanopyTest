@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fr.kanopytest.maximedonnet.kanopytest.MainActivity">
+
+    <TextView
+        android:id="@+id/repositoriesListActivityTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Specified the repository name :"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/repositoriesSearchLayout"
+        android:layout_below="@+id/repositoriesListActivityTitle">
+        <EditText
+            android:id="@+id/nameEdit"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:ems="10"
+            android:hint="ex : linux"
+            android:inputType="textWebEditText"
+            android:textAlignment="center" />
+        <Button
+            android:id="@+id/nameValidate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/nameEdit"
+            android:layout_marginLeft="50dp"
+            android:textColor="@android:color/white"
+            android:background="@android:color/holo_green_dark"
+            android:text="Validate"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/repositoriesList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/repositoriesSearchLayout"
+        android:divider="#b5b5b5"
+        android:dividerHeight="1dp" />
+
+
+</RelativeLayout>
