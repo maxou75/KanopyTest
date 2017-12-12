@@ -1,7 +1,7 @@
 # Kanopy test Android application
 
 ## Description
-This Android application allows to access repositories, its commits list and details from GitHub to through GitHub API (https://developer.github.com/v3/)
+This Android application allows to access repositories, its commits list and details from GitHub through GitHub API (https://developer.github.com/v3/)
 
 ## Getting Started
 
@@ -14,10 +14,13 @@ You will need to dispose of a computer with Android Studios and ADB installed. Y
 ### Installing
 
 #### With the APK
-* Download the KanopyTest.APK file from GitHub.
-* If your device is ready, install the APK to your phone with the following ADB command.
+* Download the KanopyTest.apk file from GitHub.
+* If your device is ready, install the APK to your phone with the following command :
 ```
-$ adb install ~/YourDirectory/KanopyTest.apk
+$ adb install -r -t ~/YourDirectory/KanopyTest.apk
+```
+* Start the application with the following command :
+```
 $ adb shell am start -n "fr.kanopytest.maximedonnet.kanopytest/fr.kanopytest.maximedonnet.kanopytest.MainActivity" -a android.intent.action.MAIN -c android.intent.category.LAUNCHER
 ```
 
@@ -29,7 +32,7 @@ $ adb shell am start -n "fr.kanopytest.maximedonnet.kanopytest/fr.kanopytest.max
 
 ### Usage
 * The first activity allows you to find GitHub repositories by their names.
-* Click on an item repositories list to display its 30 last commits.
+* Click on an item of the repositories list to display its 30 last commits.
 * On the new activity, you can filter commits by committer name and/or message content.
 * When you select a commit, a new activity appears to show its details.
 * You can click on a user avatar to access its details through the web browser.
