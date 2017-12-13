@@ -184,7 +184,7 @@ public class CommitsListActivity extends Activity {
             public void onResponse(JSONArray response) {
                 try {
                     Log.d(TAG, "JSONArray : " + response.toString());
-                    List<Commit> commitsList = parseCommitsList(new JSONArray(response));
+                    List<Commit> commitsList = parseCommitsList(response);
                     mAdapter = new CommitAdapter(getApplicationContext(), commitsList);
                     listView.setAdapter(mAdapter);
                     progressBar.setVisibility(View.GONE);
