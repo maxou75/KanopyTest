@@ -184,7 +184,7 @@ public class CommitsListActivity extends Activity {
             public void onResponse(JSONArray response) {
                 try {
                     Log.d(TAG, "JSONArray : " + response.toString());
-                    List<Commit> commitsList = parseCommitsList(response);
+                    List<Commit> commitsList = parseCommitsList(new JSONArray(response));
                     mAdapter = new CommitAdapter(getApplicationContext(), commitsList);
                     listView.setAdapter(mAdapter);
                     progressBar.setVisibility(View.GONE);
@@ -206,11 +206,12 @@ public class CommitsListActivity extends Activity {
                     emptyRepository.setText("Repository is empty.");
                     filtersSearchLayout.setVisibility(View.GONE);
                     emptyRepository.setVisibility(View.VISIBLE);
-                } else if (error.getMessage() != null) {
-                    CharSequence log = "Impossible to retrieve data (" + error.getMessage() + ")";
-                    Toast.makeText(getApplicationContext(), log, Toast.LENGTH_LONG).show();
                 } else {
-                    CharSequence log = "Impossible to retrieve data (" + error.getMessage() + ")";
+                    CharSequence log;
+                    if (error.getMessage() != null)
+                        log = "Impossible to retrieve data (" + error.getMessage() + ")";
+                    else
+                        log = "Impossible to retrieve data";
                     Toast.makeText(getApplicationContext(), log, Toast.LENGTH_LONG).show();
                 }
                 progressBar.setVisibility(View.GONE);
