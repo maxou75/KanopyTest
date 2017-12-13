@@ -10,8 +10,9 @@ This file describe the bonuses and features implemented in the KanopyTest applic
 * Use of ListView UI objects for a fluid and optimized display.
 * An activity that allows the user to retrieve the repositories that match the specified project name.
 * An activity that list the commits of a repository and allows to filter commits by committer name and/or message container criteria.
-* An activity that shows details of a specified commit and check if the committer and the author are the same users to not display it twice.
+* An activity that shows details of a specified commit and check if the committer and the author are the same users to not display him twice.
 * When you click on a user avatar, the web page of the user is display thought the Web browser.
+* If a user profil isn't available, his avatar image is not shown.
 * If request for avatar GitHub user image failed, image_not_found.png is showed.
 
 ## Authors
