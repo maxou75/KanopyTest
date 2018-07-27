@@ -39,6 +39,5 @@ $ adb shell am start -n "fr.kanopytest.maximedonnet.kanopytest/fr.kanopytest.max
 
 ## Authors
 
-* **Maxime DONNET** - *Initial work* - [KanopyTest](https://github.com/maxou75/KanopyTest)
-* **January 2018**
+* **Maxime DONNET** - *Initial work* - [KanopyTest](https://github.com/maxou75/KanopyTest) - January 2018
 
